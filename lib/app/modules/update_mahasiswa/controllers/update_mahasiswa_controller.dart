@@ -4,7 +4,10 @@ import 'package:get/get.dart';
 
 class UpdateMahasiswaController extends GetxController {
   late TextEditingController cNama;
-  late TextEditingController cHarga;
+  late TextEditingController cNPM;
+  late TextEditingController cAlamat;
+  late TextEditingController cProgram_Studi;
+  late TextEditingController cJk;
 
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
@@ -14,7 +17,8 @@ class UpdateMahasiswaController extends GetxController {
     return docRef.get();
   }
 
-  void updateMahasiswa(String nama, String harga, String id) async {
+  void updateMahasiswa(String npm, String nama, String alamat,
+      String program_studi, String jk, String id) async {
     DocumentReference mahasiswaById = firestore.collection("mahasiswa").doc(id);
     try {
       await mahasiswaById.update({
