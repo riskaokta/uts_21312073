@@ -47,7 +47,7 @@ class AppPages {
       binding: AddMahasiswaBinding(),
     ),
     GetPage(
-      name: _Paths.UPDATE_MAHASISWA
+      name: _Paths.UPDATE_MAHASISWA,
       page: () => const UpdateMahasiswaView(),
       binding: UpdateMahasiswaBinding(),
     ),

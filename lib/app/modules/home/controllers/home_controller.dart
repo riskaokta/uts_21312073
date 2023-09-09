@@ -16,7 +16,7 @@ class HomeController extends GetxController {
     return products.snapshots();
   }
 
-  void deleteProduct(String id) {
+  void deleteMahasiswa(String id) {
     DocumentReference docRef = firestore.collection("mahasiswa").doc(id);
 
     try {
